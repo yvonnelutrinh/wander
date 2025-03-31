@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { observer } from "mobx-react-lite";
 import { useContext, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
