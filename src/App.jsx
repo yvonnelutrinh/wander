@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.scss";
-import HomePage from "./pages/HomePage/Homepage";
+import HomePage from "./pages/HomePage/HomePage";
 import SelectionsPage from "./pages/SelectionsPage/SelectionsPage";
 import ComparisonPage from "./pages/ComparisonPage/ComparisonPage";
 import BreathePage from "./pages/BreathePage/BreathePage";
