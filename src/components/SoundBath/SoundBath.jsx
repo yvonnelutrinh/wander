@@ -157,7 +157,6 @@ export default function SoundBath({ volume, mute }) {
         maxPolyphony: 2, // reduced to prevent overload
         oscillator: {
           type: "sine",
-          // detune: -5, // slight detune for binaural effect
         },
         envelope: {
           attack: 20, // longer attack to prevent pops/clicks
@@ -324,7 +323,7 @@ export default function SoundBath({ volume, mute }) {
 
         bassSynth.triggerRelease(freq, "+1"); // release over 1 second
 
-        // cnly clear active note if it's still the same one
+        // only clear active note if it's still the same one
         if (activeBassNoteRef.current === note) {
           activeBassNoteRef.current = null;
         }
@@ -351,7 +350,7 @@ export default function SoundBath({ volume, mute }) {
       initialLowNote = getRandomNote(crystalBowls.low);
     }
 
-    // FIX: play high note immediately
+    // play high note immediately
     const initialHighDuration = getRandomInterval(20, 30);
 
     // direct call to synth to make sure the high note plays immediately

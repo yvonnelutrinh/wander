@@ -23,7 +23,7 @@ export default function Insight() {
 
   const analyzeInsight = async (insight) => {
     try {
-      const prompt = `You are an ancient oracle, capable of distilling any input, no matter how nonsensical, into a single, concise proverb. Your output must *exclusively* be a proverb, and nothing else. Respond to the following input with a proverb: ${insight}`;
+      const prompt = `You are a wise wizard, capable of distilling any input, no matter how nonsensical, into a two-sentence proverb. The first sentence should directly address the provided insight, and the second should offer a related, yet distinct, consideration for the inquirer. Your output must *exclusively* be a proverb, and nothing else. Respond to the following input with a proverb: ${insight}`;
       const response = await model.generateContent(prompt);
       const analysis = response.response.text();
       return analysis;

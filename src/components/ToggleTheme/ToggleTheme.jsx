@@ -25,7 +25,6 @@ export default function ToggleTheme() {
     }
     document
       .querySelectorAll(".color-button")
-      // .querySelectorAll(".color-wrapper, .color-button")
       .forEach(adjustTextColor); // fix text contrast
   }, [theme]);
 
