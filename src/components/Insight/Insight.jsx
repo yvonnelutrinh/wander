@@ -15,7 +15,7 @@ export default function Insight() {
     const getResponse = async () => {
       if (insight !== "") {
         const response = await analyzeInsight(insight);
-        navigate(`/end/${response}`);
+        navigate(`/end`);
       }
     };
     getResponse();
