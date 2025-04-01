@@ -42,7 +42,7 @@ export default function SoundEffects({ currentRoute, volume, mute }) {
           : "music";
 
         const sound = new Howl({
-          src: [PUBLIC_URL+src],
+          src: [PUBLIC_URL + src],
           volume: volume,
           preload: true,
           loop: loop === true, // set loop only if explicitly true

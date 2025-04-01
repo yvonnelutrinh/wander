@@ -6,7 +6,7 @@ import {
   sourceConfig,
 } from "../SlidesManager/SlidesManager.jsx";
 import "./VoiceOver.scss";
-import { PUBLIC_URL } from "../../main";
+import { PUBLIC_URL } from "../../main.jsx";
 
 export default function VoiceOver({
   onVoiceOverEnd,
@@ -19,7 +19,7 @@ export default function VoiceOver({
   const cleanPath = () => `/${location.split("/")[1]}`;
   const currentRoute = cleanPath().slice(1);
   const [sound, setSound] = useState(null);
-
+  console.log(PUBLIC_URL)
   useEffect(() => {
     // get the appropriate audio source for the current route and text index
     const audioSource = getAudioSource(currentRoute, currentTextIndex);
@@ -29,7 +29,7 @@ export default function VoiceOver({
 
       // create Howl instance with appropriate configuration
       const newSound = new Howl({
-        src: [PUBLIC_URL+audioSource],
+        src: [PUBLIC_URL + audioSource],
         sprite: { sprite: spriteTiming },
         onend: () => {
           onVoiceOverEnd();
