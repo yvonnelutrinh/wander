@@ -6,6 +6,7 @@ import {
   sourceConfig,
 } from "../SlidesManager/SlidesManager.jsx";
 import "./VoiceOver.scss";
+import {BASE_URL} from "../../main.jsx";
 
 export default function VoiceOver({
   onVoiceOverEnd,
@@ -22,14 +23,13 @@ export default function VoiceOver({
   useEffect(() => {
     // get the appropriate audio source for the current route and text index
     const audioSource = getAudioSource(currentRoute, currentTextIndex);
-    // return config[section].source
     const sprite = sourceConfig[currentRoute].sprites[currentTextIndex];
     if (sprite) {
       const spriteTiming = sprite.timing;
 
       // create Howl instance with appropriate configuration
       const newSound = new Howl({
-        src: [audioSource],
+        src: [BASE_URL+audioSource],
         sprite: { sprite: spriteTiming },
         onend: () => {
           onVoiceOverEnd();

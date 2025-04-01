@@ -1,6 +1,7 @@
 import { Howl } from "howler";
 import { soundEffects, music } from "../../data/sfxData";
 import { useState, useEffect } from "react";
+import { BASE_URL } from "../../main";
 
 export default function SoundEffects({ currentRoute, volume, mute }) {
   const audioFiles = {
@@ -41,14 +42,12 @@ export default function SoundEffects({ currentRoute, volume, mute }) {
           : "music";
 
         const sound = new Howl({
-          src: [src],
+          src: [BASE_URL+src],
           volume: volume,
           preload: true,
           loop: loop === true, // set loop only if explicitly true
           group: group,
         });
-
-        // registerChannel(name, sound);
 
         if (typeof loop === "number") {
           sound.on("end", () => handleLoopedSoundEnd(sound, name, loop));
