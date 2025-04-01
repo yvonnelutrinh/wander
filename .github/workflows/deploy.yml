@@ -37,12 +37,14 @@ jobs:
           cache: 'npm'
         env:
           VITE_GEMINI_API_KEY: ${{ secrets.VITE_GEMINI_API_KEY }}
+          VITE_PUBLIC_URL: ${{ secrets.VITE_PUBLIC_URL }}
       - name: Install dependencies
         run: npm ci
       - name: Build
         env:
           VITE_GEMINI_API_KEY: ${{ secrets.VITE_GEMINI_API_KEY }}
-        run: VITE_GEMINI_API_KEY=$VITE_GEMINI_API_KEY npm run build
+          VITE_PUBLIC_URL: ${{ secrets.VITE_PUBLIC_URL }}
+        run: VITE_GEMINI_API_KEY=$VITE_GEMINI_API_KEY VITE_PUBLIC_URL=$VITE_PUBLIC_URL npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
