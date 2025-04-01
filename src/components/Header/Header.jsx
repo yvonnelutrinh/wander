@@ -2,11 +2,14 @@ import "./Header.scss";
 import ToggleTheme from "../ToggleTheme/ToggleTheme";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { IndexContext } from "../../data/IndexProvider";
 
 export default function Header() {
   const [visible, setVisible] = useState(true);
   const [hovered, setHovered] = useState(false);
+  const indexStore = useContext(IndexContext);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setVisible(false);
@@ -30,7 +33,12 @@ export default function Header() {
         }}
         transition={{ duration: 0.5 }}
       >
-        <Link to="/">
+        <Link
+          onClick={() => {
+            indexStore.setStarted(false);
+          }}
+          to="/"
+        >
           <h1>wander</h1>
         </Link>
         <ToggleTheme />
