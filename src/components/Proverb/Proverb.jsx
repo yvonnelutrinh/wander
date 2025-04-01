@@ -1,9 +1,8 @@
-import { useParams } from "react-router-dom";
 import { motion } from "motion/react";
 import "./Proverb.scss";
 
 export default function () {
-  const { insight } = useParams();
+  const insight = localStorage.getItem('insight')
 
   return (
     <motion.div

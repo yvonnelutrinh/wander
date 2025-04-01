@@ -4,6 +4,7 @@ class IndexStore {
   currentIndex = 0;
   currentText = '';
   started = false;
+  insight = "";
 
   constructor() {
     makeAutoObservable(this);
@@ -19,6 +20,10 @@ class IndexStore {
 
   setStarted(started) {
     this.started = started;
+  }
+
+  setInsight(insight){
+    this.insight = insight;
   }
 
 }

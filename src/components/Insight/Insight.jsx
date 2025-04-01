@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Insight.scss";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const API_KEY =  import.meta.env.VITE_GEMINI_API_KEY;
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
@@ -15,6 +15,7 @@ export default function Insight() {
     const getResponse = async () => {
       if (insight !== "") {
         const response = await analyzeInsight(insight);
+        localStorage.setItem("insight", response);
         navigate(`/end`);
       }
     };
