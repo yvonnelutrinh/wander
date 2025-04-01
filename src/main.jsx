@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { IndexProvider } from "./data/IndexProvider.jsx";
 export const BASE_URL = import.meta.env.BASE_URL;
+export const PUBLIC_URL = import.meta.env.VITE_PUBLIC_URL;
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

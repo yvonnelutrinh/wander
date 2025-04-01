@@ -1,7 +1,7 @@
 import { Howl } from "howler";
 import { soundEffects, music } from "../../data/sfxData";
 import { useState, useEffect } from "react";
-import { BASE_URL } from "../../main";
+import { PUBLIC_URL } from "../../main";
 
 export default function SoundEffects({ currentRoute, volume, mute }) {
   const audioFiles = {
@@ -42,7 +42,7 @@ export default function SoundEffects({ currentRoute, volume, mute }) {
           : "music";
 
         const sound = new Howl({
-          src: [BASE_URL+src],
+          src: [PUBLIC_URL+src],
           volume: volume,
           preload: true,
           loop: loop === true, // set loop only if explicitly true
