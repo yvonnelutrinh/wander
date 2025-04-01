@@ -6,7 +6,6 @@ import {
   sourceConfig,
 } from "../SlidesManager/SlidesManager.jsx";
 import "./VoiceOver.scss";
-import { PUBLIC_URL } from "../../main.jsx";
 
 export default function VoiceOver({
   onVoiceOverEnd,
@@ -28,7 +27,7 @@ export default function VoiceOver({
 
       // create Howl instance with appropriate configuration
       const newSound = new Howl({
-        src: [PUBLIC_URL + audioSource],
+        src: [audioSource],
         sprite: { sprite: spriteTiming },
         onend: () => {
           onVoiceOverEnd();
