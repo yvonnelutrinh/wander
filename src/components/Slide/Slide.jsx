@@ -26,12 +26,11 @@ function Slide({ setShowWords, setShowInsight, setWordsFinalized }) {
   // update text whenever route or index changes
   const updateCurrentText = () => {
     const text = getTextSource(currentRoute, currentTextIndex);
-
     indexStore.setCurrentText(text);
   };
 
   function handleNext() {
-    if (isTransitioningRef.current) return;
+    if (isTransitioningRef.current && !currentText.includes("Generate")) return;
     isTransitioningRef.current = true;
 
     const nextIndex = indexStore.currentIndex + 1;
@@ -86,27 +85,28 @@ function Slide({ setShowWords, setShowInsight, setWordsFinalized }) {
             ease: "easeInOut",
           }}
         >
-          {(currentTextIndex > 0 ||
-            (currentText && currentText.includes("lead"))) && (
-            <motion.button
-              className="slide__button"
-              initial={{ opacity: 0.8 }}
-              whileHover={{
-                opacity: 1,
-                transition: {
-                  duration: 0.3,
-                  ease: "easeInOut",
-                },
-              }}
-              onClick={() => {
-                const nextIndex = indexStore.currentIndex - 1;
-                const index = Math.max(0, nextIndex);
-                indexStore.setIndex(index);
-              }}
-            >
-              Back
-            </motion.button>
-          )}
+          {currentTextIndex > 0 &&
+            currentText &&
+            !currentText.includes("lead") && (
+              <motion.button
+                className="slide__button"
+                initial={{ opacity: 0.8 }}
+                whileHover={{
+                  opacity: 1,
+                  transition: {
+                    duration: 0.3,
+                    ease: "easeInOut",
+                  },
+                }}
+                onClick={() => {
+                  const nextIndex = indexStore.currentIndex - 1;
+                  const index = Math.max(0, nextIndex);
+                  indexStore.setIndex(index);
+                }}
+              >
+                Back
+              </motion.button>
+            )}
           {currentTextIndex + 1 < numberOfSprites && (
             <motion.button
               initial={{ opacity: 0.8 }}
