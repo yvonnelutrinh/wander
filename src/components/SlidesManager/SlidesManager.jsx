@@ -1,6 +1,6 @@
 export const sourceConfig = {
   "": {
-    source: "src/assets/audio/wander-narration.mp3",
+    source: "assets/audio/wander-narration.mp3",
     sprites: {
       0: {
         timing: [0, 5400],
@@ -17,7 +17,7 @@ export const sourceConfig = {
     },
   },
   ground: {
-    source: "src/assets/audio/wander-narration.mp3",
+    source: "assets/audio/wander-narration.mp3",
     sprites: {
       0: {
         timing: [13280, 2360],
@@ -66,7 +66,7 @@ export const sourceConfig = {
     },
   },
   breathe: {
-    source: "src/assets/audio/wander-narration.mp3",
+    source: "assets/audio/wander-narration.mp3",
     sprites: {
       0: {
         timing: [36820, 2760],
@@ -79,47 +79,47 @@ export const sourceConfig = {
       2: {
         timing: [0, 6000],
         text: "Breathe in...",
-        source: "src/assets/audio/breathe-in-1.mp3",
+        source: "assets/audio/breathe-in-1.mp3",
       },
       3: {
         timing: [0, 6000],
         text: "Breathe out...",
-        source: "src/assets/audio/breathe-out-1.mp3",
+        source: "assets/audio/breathe-out-1.mp3",
       },
       4: {
         timing: [0, 6000],
         text: "Breathe in...",
-        source: "src/assets/audio/breathe-in-2.mp3",
+        source: "assets/audio/breathe-in-2.mp3",
       },
       5: {
         timing: [0, 6000],
         text: "Breathe out...",
-        source: "src/assets/audio/breathe-out-2.mp3",
+        source: "assets/audio/breathe-out-2.mp3",
       },
       6: {
         timing: [0, 6000],
         text: "Breathe in...",
-        source: "src/assets/audio/breathe-in-3.mp3",
+        source: "assets/audio/breathe-in-3.mp3",
       },
       7: {
         timing: [0, 6000],
         text: "Breathe out...",
-        source: "src/assets/audio/breathe-out-3.mp3",
+        source: "assets/audio/breathe-out-3.mp3",
       },
       8: {
         timing: [0, 6000],
         text: "Keep breathing at your own pace.",
-        source: "src/assets/audio/keep-breathing.mp3",
+        source: "assets/audio/keep-breathing.mp3",
       },
       9: {
         timing: [0, 6000],
         text: "Continue when you're ready to move on.",
-        source: "src/assets/audio/continue.mp3",
+        source: "assets/audio/continue.mp3",
       },
     },
   },
   compare: {
-    source: "src/assets/audio/wander-narration.mp3",
+    source: "assets/audio/wander-narration.mp3",
     sprites: {
       0: {
         timing: [52120, 3040],
@@ -180,7 +180,7 @@ export const sourceConfig = {
     },
   },
   end: {
-    source: "src/assets/audio/wander-narration.mp3",
+    source: "assets/audio/wander-narration.mp3",
     sprites: {
       0: {
         timing: [91000, 2000],
