@@ -1,6 +1,6 @@
 export const sourceConfig = {
   "": {
-    source: "public/audio/wander-narration.mp3",
+    source: "audio/wander-narration.mp3",
     sprites: {
       0: {
         timing: [0, 5400],
@@ -17,7 +17,7 @@ export const sourceConfig = {
     },
   },
   ground: {
-    source: "public/audio/wander-narration.mp3",
+    source: "audio/wander-narration.mp3",
     sprites: {
       0: {
         timing: [13280, 2360],
@@ -66,7 +66,7 @@ export const sourceConfig = {
     },
   },
   breathe: {
-    source: "public/audio/wander-narration.mp3",
+    source: "audio/wander-narration.mp3",
     sprites: {
       0: {
         timing: [36820, 2760],
@@ -79,47 +79,47 @@ export const sourceConfig = {
       2: {
         timing: [0, 6000],
         text: "Breathe in...",
-        source: "public/audio/breathe-in-1.mp3",
+        source: "audio/breathe-in-1.mp3",
       },
       3: {
         timing: [0, 6000],
         text: "Breathe out...",
-        source: "public/audio/breathe-out-1.mp3",
+        source: "audio/breathe-out-1.mp3",
       },
       4: {
         timing: [0, 6000],
         text: "Breathe in...",
-        source: "public/audio/breathe-in-2.mp3",
+        source: "audio/breathe-in-2.mp3",
       },
       5: {
         timing: [0, 6000],
         text: "Breathe out...",
-        source: "public/audio/breathe-out-2.mp3",
+        source: "audio/breathe-out-2.mp3",
       },
       6: {
         timing: [0, 6000],
         text: "Breathe in...",
-        source: "public/audio/breathe-in-3.mp3",
+        source: "audio/breathe-in-3.mp3",
       },
       7: {
         timing: [0, 6000],
         text: "Breathe out...",
-        source: "public/audio/breathe-out-3.mp3",
+        source: "audio/breathe-out-3.mp3",
       },
       8: {
         timing: [0, 6000],
         text: "Keep breathing at your own pace.",
-        source: "public/audio/keep-breathing.mp3",
+        source: "audio/keep-breathing.mp3",
       },
       9: {
         timing: [0, 6000],
         text: "Continue when you're ready to move on.",
-        source: "public/audio/continue.mp3",
+        source: "audio/continue.mp3",
       },
     },
   },
   compare: {
-    source: "public/audio/wander-narration.mp3",
+    source: "audio/wander-narration.mp3",
     sprites: {
       0: {
         timing: [52120, 3040],
@@ -180,7 +180,7 @@ export const sourceConfig = {
     },
   },
   end: {
-    source: "public/audio/wander-narration.mp3",
+    source: "audio/wander-narration.mp3",
     sprites: {
       0: {
         timing: [91000, 2000],
